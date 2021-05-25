@@ -1,4 +1,5 @@
 import random
+display = drivers.Lcd()
 
 with open('dinners.txt') as f:
     lines = f.readlines()
@@ -10,4 +11,5 @@ for dinner in lines:
 
 rand = random.randrange(len(lines))
 choice = lines[rand]
-print(choice)
+
+display.lcd_display_string(choice, 1)
