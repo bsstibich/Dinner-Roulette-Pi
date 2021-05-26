@@ -26,6 +26,7 @@ def button_callback(channel):
 	sleep(30)	
 	display.lcd_clear()
 	display.lcd_display_string("Dinner Roulette!",1)
+	display.lcd_display_string("Brandon Stibich",2)
 
 def long_string(display, text='', num_line=1, num_cols=16):
 	if len(text) > num_cols:
@@ -41,6 +42,7 @@ def long_string(display, text='', num_line=1, num_cols=16):
 
 display.lcd_clear()
 long_string(display, "Dinner Roulette!", 1)
+display.lcd_display_string("Brandon Stibich",2)
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
@@ -52,4 +54,5 @@ message = input("Press enter to quit\n\n")
 #	x = 0
 display.lcd_clear()
 display.lcd_display_string("Dinner Roulette!",1)
+display.lcd_display_string("Brandon Stibich",2)
 GPIO.cleanup()
