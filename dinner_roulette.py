@@ -8,7 +8,7 @@ display = drivers.Lcd()
 def button_callback(channel):
 	display.lcd_clear()
 	
-	with open('dinners.txt') as f:
+	with open('/home/pi/Dinner-Roulette-Pi/dinners.txt') as f:
 		lines = f.readlines()
 	
 	x=0
@@ -48,6 +48,8 @@ GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.add_event_detect(10,GPIO.RISING,callback=button_callback,bouncetime=1000)
 message = input("Press enter to quit\n\n")
 
+#while True:
+#	x = 0
 display.lcd_clear()
 display.lcd_display_string("Dinner Roulette!",1)
 GPIO.cleanup()
