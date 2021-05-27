@@ -23,7 +23,7 @@ def button_callback(channel):
 	for x in range(3):
 		long_string(display, "Dinner Roulette!", 1)
 		long_string(display, choice, 2)
-	sleep(30)	
+	sleep(15)	
 	display.lcd_clear()
 	display.lcd_display_string("Dinner Roulette!",1)
 	display.lcd_display_string("Brandon Stibich",2)
